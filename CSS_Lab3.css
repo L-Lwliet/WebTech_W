@@ -1,0 +1,310 @@
+/* General page layout */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #000;
+    margin: 30px;
+  }
+  
+  /* Main form container */
+  form {
+    background-color: #fff;
+    padding: 25px 40px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    column-gap: 15px;
+    row-gap: 10px;
+    align-items: center;
+  }
+  
+  /* Navigation links */
+  nav {
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+  nav a {
+    text-decoration: none;
+    color: #000;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Section titles */
+  h2, h3 {
+    color: red;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    grid-column: 1 / span 2;
+  }
+  
+  /* Labels aligned to left column */
+  label {
+    font-size: 10px;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 10px;
+  }
+  
+  /* Input and select fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    font-size: 10px;
+  }
+  
+  /* Textarea for comments */
+  textarea {
+    width: 95%;
+    height: 80px;
+    resize: none;
+  }
+  
+  /* Full-width items */
+  p1, .donation-group, .honoriam, .anonymous, .matching, 
+  .noMail, .recurringDonation, .email, .postMail, .terms, 
+  button, textarea, .button-group {
+    grid-column: 1 / span 2;
+  }
+
+  p{
+    font-size: 10px;
+    text-align: left;
+    padding-right: 10px;
+  }
+  
+  /* Donation amount radio group */
+  .donation-group {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+  }
+
+  .donation-group .mainLabel {
+    font-size: 10px;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 10px;
+    display: block;
+    min-width: 200px; 
+  }
+
+  .donation-group label:not(.mainLabel) {
+    font-weight: normal;
+    margin-right: 10px;
+  }
+  
+  /* Honorarium radio group */
+  .honoriam {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+  }
+
+  .honoriam .mainHlabel {
+    font-size: 10px;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 10px;
+    display: block;
+    min-width: 200px;
+  }
+
+  .honoriam label:not(.mainHlabel) {
+    font-weight: normal;
+    margin-right: 10px;
+  }
+
+  /*Recurring Donation Checkbox*/
+  .recurringDonation{
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+  }
+
+  .recurringDonation .mainRlabel {
+    font-size: 10px;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 10px;
+    display: block;
+    min-width: 200px;
+  }
+
+  .recurringDonation label:not(.mainRlabel) {
+    font-weight: normal;
+    margin-right: 10px;
+  }
+
+  /*Preference Checkbox*/
+.preference {
+    grid-column: 1 / span 2;   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  .preference label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+  }
+
+  /*Contact*/
+  .contact {
+    grid-column: 1 / span 2;  /* span entire form width */
+    margin-top: 10px;
+  }
+  
+  /* Make the checkboxes stack vertically and align left */
+  .contact-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px; /* space between checkboxes */
+  }
+  
+  /* Optional: add small spacing between checkbox and text */
+  .contact-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+  }
+
+  /*Newsletter*/
+
+  .newsletter {
+    grid-column: 1 / span 2;  /* span across both columns of the form */
+    margin-top: 10px;
+  }
+  
+  .newsletter-options {
+    display: flex;
+    flex-direction: column;   /* stack checkboxes vertically */
+    align-items: flex-start;  /* left-align checkboxes */
+    gap: 5px;                 /* spacing between checkboxes */
+  }
+  
+  .newsletter-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;                 /* space between checkbox and text */
+    font-size: 10px;
+  }
+  
+  
+  
+  
+  /* Structure*/
+  .donation-group,
+  .honoriam {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+  }
+
+  input[type="radio"] {
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+
+  input[type="checkbox"] {
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+  
+  /* Checkbox & radio spacing */
+  /*input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }*/
+
+  /*Monthly Credit*/
+  .mCredit {
+    display: grid;
+    grid-template-columns: 200px 100px 50px 50px auto;
+    align-items: center;
+    gap: 10px;
+  }
+
+  
+  /* Buttons container (bottom right) */
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Buttons style */
+  button {
+    width: 100px;
+    padding: 6px 10px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    background-color: #e0e0e0;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #ccc;
+  }
+  
+  /* Text sections */
+  p1 {
+    font-size: 12px;
+    color: #333;
+    grid-column: 1 / span 2;
+  }
+  
+  p {
+    font-size: 10px;
+    margin-top: 10px;
+    grid-column: 1 / span 2;
+  }
+  
+  /* Checkbox label spacing */
+  .anonymous,
+  .matching,
+  .noMail,
+  .recurringDonation,
+  .email,
+  .postMail,
+  .terms {
+    margin-top: 5px;
+  }
+  
+  /* Input focus highlight */
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #555;
+    outline: none;
+  }
+  
